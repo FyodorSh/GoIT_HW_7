@@ -1,3 +1,0 @@
-[console_scripts]
-clean-folder = sort_folder.sort_folder:clean
-
