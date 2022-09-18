@@ -88,7 +88,12 @@ def create_sort_dir(start_path: str):
         SORT_DIRS_LIST.append(sort_dir_path)
 
 
-def clean(start_path: str):
+def clean():
+    if len(sys.argv) < 2:
+        print('Enter path to folder which should be cleaned')
+        exit()
+
+    start_path = sys.argv[1]
     create_sort_dir(start_path)
     check_dir(start_path)
     check_dir(start_path, True) # delete empty folders
@@ -96,8 +101,4 @@ def clean(start_path: str):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) > 1:
-        start_path = sys.argv[1]
-        clean(start_path)
-    else:
-        print("Folder not specified")
+    clean()

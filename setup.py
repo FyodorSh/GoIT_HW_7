@@ -7,5 +7,6 @@ setup(name='Sort folder',
       author_email='fyodor.shevchenko@gmail.com',
       license='MIT',
       packages=find_namespace_packages(),
-      install_requires=['py7zr', 'patool']
+      install_requires=['py7zr', 'patool'],
+      entry_points={'console_scripts': ['clean-folder = sort_folder.sort_folder:clean']}
      )
